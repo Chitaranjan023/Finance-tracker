@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenFinance - Mindful Money</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="96_Gi0oVJtHQ05piaRARglUah5VQmkgARxAcT-0M8ew" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>💰 ZenFinance</h1>
+                <button id="theme-toggle" class="btn-secondary">🌙</button>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card income">
+                <h3>Income</h3>
+                <p id="total-income">₹0</p>
+            </div>
+            <div class="stat-card expense">
+                <h3>Expense</h3>
+                <p id="total-expense">₹0</p>
+            </div>
+            <div class="stat-card balance">
+                <h3>Balance</h3>
+                <p id="total-balance">₹0</p>
+            </div>
+        </div>
+
+        <!-- Transaction Form -->
+        <section class="form-section">
+            <h3>Add New Transaction</h3>
+            <form id="finance-form">
+                <div class="input-group">
+                    <label>Description</label>
+                    <input type="text" id="desc" placeholder="e.g. Salary, Groceries" required>
+                </div>
+                <div class="input-group">
+                    <label>Amount (₹)</label>
+                    <input type="number" id="amount" placeholder="0.00" required>
+                </div>
+                <div class="input-group">
+                    <label>Type</label>
+                    <select id="type">
+                        <option value="income">💰 Income</option>
+                        <option value="expense">💸 Expense</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Add Transaction</button>
+            </form>
+        </section>
+
+        <!-- History -->
+        <section class="history-section">
+            <div class="history-header">
+                <h3>Recent Activity</h3>
+                <button id="clear-data" class="btn-text">Clear All</button>
+            </div>
+            <ul id="transaction-list">
+                <!-- Data will appear here -->
+            </ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
